@@ -6,16 +6,13 @@ password = input("Input your password: ")
 
 print("\n----> Log-In System <----")
 lusername = input("Username: ")
+lpassword = input("Password: ")
 
-if lusername == username:
-	print("Your username is correct! ")
-	lpassword = input("Password: ")
-	if lpassword == password:
-		print("\n-->> You have successfully LOGGED IN! <<--")
-		print("Welcome to ACTIVITIY 10! :>")
-	else:
-		print("Your password is incorrect!")
+if lusername == username and lpassword == password:
+	print("\n---> You have successfully LOGGED IN! <---")
+	print("Welcome to ACTIVITIY 10! :>")
+	print("User: ", username)
 else:
-	print("Your username is incorrect!")
-
+	print("\nAccess DENIED!")
+	print("Please run the code to try again")
 	
