@@ -46,20 +46,29 @@ International = input("Is your order International? (Yes/No) --> ")
 
 Express = input("Do you need to rush your order? (Yes/No) --> ")
 
+shipping_cost = 0
+
 if International.upper == "YES" and Express.upper == "YES" and is_fragile == True:
-
+  is_express = True
+  is_international = True
 elif International.upper == "YES" and Express.upper == "NO" and is_fragile == True:
-
+  is_express = False
+  is_international = True
 elif International.upper == "NO" and Express.upper == "YES" and is_fragile == True:
-
+  is_express = True
+  is_international = False
 elif International.upper == "NO" and Express.upper == "NO" and is_fragile == True:
-
+  is_express = False
+  is_international = False
 elif International.upper == "YES" and Express.upper == "YES" and is_fragile == False:
-
+  is_express = True
+  is_international = True
 elif International.upper == "YES" and Express.upper == "NO" and is_fragile == False:
-
+  is_express = False
+  is_international = True
 elif International.upper == "NO" and Express.upper == "YES" and is_fragile == False:
-
+  is_express = True
+  is_international = False
 elif International.upper == "NO" and Express.upper == "NO" and is_fragile == False:
-
-else:
+  is_express = False
+  is_international = False
