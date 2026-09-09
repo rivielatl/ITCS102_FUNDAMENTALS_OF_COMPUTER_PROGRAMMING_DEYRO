@@ -15,7 +15,7 @@ elif age >= 20 and age <= 29:
 	print("Your age is considered as EARLY ADULTHOOD!")
 elif age >= 30 and age <= 58:
 	print("Your age is considered as ADULT!")
-elif age >= 59 and age <= 120:
+elif age >= 59 and age <= 150:
 	print("Your age is considered as SENIOR!")
 else:
 	print("Your age is INVALID!")
