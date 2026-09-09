@@ -1,19 +1,22 @@
-# Import demo
-import getpass
+# Multiple IF AND ELIF CONDITIONS
 
-print("<---- Register your account ---->")
-username = input("Register your username: ")
-password = input("Input your password: ")
+name = input("Please input your name --> ")
+age = int(input("Please input your age --> "))
 
-print("\n----> Log-In System <----")
-lusername = input("Username: ")
-lpassword = getpass.getpass("Password: ")
-
-if lusername == username and lpassword == password:
-	print("\n---> You have successfully LOGGED IN! <---")
-	print("Welcome to ACTIVITIY 10! :>")
-	print("User: ", username)
+if age >= 0 and age <= 5:
+	print("Your age is considered as INFANT!")
+elif age >= 6 and age <= 12:
+	print("Your age is considered as KID!")
+elif age >= 13 and age <= 15:
+	print("Your age is considered as PRE-TEEN!")
+elif age >= 16 and age <= 19:
+	print("Your age is considered as TEENAGER!")
+elif age >= 20 and age <= 29:
+	print("Your age is considered as EARLY ADULTHOOD!")
+elif age >= 30 and age <= 58:
+	print("Your age is considered as ADULT!")
+elif age >= 59 and age <= 120:
+	print("Your age is considered as SENIOR!")
 else:
-	print("\nAccess DENIED!")
-	print("Please run the code to try again")
-	
+	print("Your age is INVALID!")
+
