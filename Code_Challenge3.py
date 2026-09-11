@@ -1,5 +1,7 @@
 # Global Freight Calculator
 
+sender_name = input("Input your name --> ")
+type_of_item = input("What type is your item? --> ")
 weight = float(input("Enter weight (kg) --> "))
 distance = float(input("Enter distance (km) -->  "))
 is_express = input("Is it express? (True/False) --> ")
@@ -22,7 +24,14 @@ else:
     total = base_cost
 
 print("\n_______________________________\n")
+print("Sender Name: ", sender_name)
+print("Type of Item: ", type_of_item)
 print("Shipping Cost: ₱", total)
+print("_______________________________")
 print("Weight: ", weight, "kg")
 print("Distance: ", distance, "km")
+print("_______________________________")
+print("Is international: ", is_international)
+print("Is express: ", is_express)
+print("Is fragile: ", is_fragile)
 print("\n_______________________________")
