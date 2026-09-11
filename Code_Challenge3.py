@@ -18,8 +18,6 @@ elif is_express or (is_international and weight > 20):
     total = (base_cost * 1.20) + 25
 elif weight > 30 or distance > 1000:
     total = base_cost + 30
-elif is_fragile == True:
-    total = base_cost + 15
 else:
     total = base_cost
 
