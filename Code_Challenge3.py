@@ -4,9 +4,9 @@ sender_name = input("Input your name --> ")
 type_of_item = input("What type is your item? --> ")
 weight = float(input("Enter weight (kg) --> "))
 distance = float(input("Enter distance (km) -->  "))
-is_express = input("Is it express? (True/False) --> ")
-is_international = input("Is it international? (True/False) --> ")
-is_fragile = input("Is your item fragile? (True/False) --> ")
+is_express = bool(input("Is it express? (True/False) --> "))
+is_international = bool(input("Is it international? (True/False) --> "))
+is_fragile = bool(input("Is your item fragile? (True/False) --> "))
 
 base_cost = (weight * 2.50) + (distance * 0.15)
 
