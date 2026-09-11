@@ -23,7 +23,7 @@ elif fragile == True:
 else:
     total = base_cost
 
-print("\n_______________________________\n")
+print("\n_______________________________")
 print("Sender Name: ", sender_name)
 print("Type of Item: ", type_of_item)
 print("Shipping Cost: ₱", total)
@@ -34,4 +34,4 @@ print("_______________________________")
 print("Is international: ", is_international)
 print("Is express: ", is_express)
 print("Is fragile: ", is_fragile)
-print("\n_______________________________")
+print("_______________________________")
