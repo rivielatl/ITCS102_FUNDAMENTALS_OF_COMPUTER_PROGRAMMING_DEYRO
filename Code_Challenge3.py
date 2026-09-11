@@ -1,74 +1,28 @@
 # Global Freight Calculator
 
-Sender_Name = input("Input your name: ")
-print("____________________________")
-print("A. Utensil Set: ₱250 \nB. Cabinet: ₱750 \nC. Glass Set: ₱850")
-print("____________________________")
-Type_of_Item = input("Which one do you want to order? (Letter Only) --> ")
-itemprice = 0
-itemweight = 0
-is_fragile = True
+weight = float(input("Enter weight (kg) --> "))
+distance = float(input("Enter distance (km) -->  "))
+is_express = input("Is it express? (True/False) --> ")
+is_international = input("Is it international? (True/False) --> ")
+is_fragile = input("Is your item fragile? (True/False) --> ")
 
-print("____________________________")
-if Type_of_Item == "A":
-  print("The Item you have chosen is: Utensil Set. (₱250)")
-  itemprice += 250
-  itemweight += 1
-  is_fragile = False 
-elif Type_of_Item == "B":
-  print("The Item you have chosen is: Cabinet. (₱750)")
-  itemprice += 750
-  itemweight += 4
-  is_fragile = False
-elif Type_of_Item == "C":
-  print("The Item you have chosen is: Glass Set. (₱850)")
-  itemprice += 850
-  itemweight += 2
-  is_fragile = True
+base_cost = (weight * 2.50) + (distance * 0.15)
+
+if weight <= 2.0 and distance <= 100 and is_express == False and is_international == False:
+    total = 0.00
+elif is_international and is_express:
+    total = (base_cost * 1.40) + 50
+elif is_express or (is_international and weight > 20):
+    total = (base_cost * 1.20) + 25
+elif weight > 30 or distance > 1000:
+    total = base_cost + 30
+elif fragile == True:
+    total = base_cost + 1
 else:
-  print("Invalid Choice, Please Try Again.")
-  exit()
+    total = base_cost
 
-itemamount = eval(input("How many of this item do you want to order? --> "))
-itemprice *= itemamount
-itemweight *= itemamount
-print("Your total cost in your item is: ₱", itemprice)
-print("Your total item weight is: ", itemweight, " kg")
-print("____________________________")
-
-distance = eval(input(("Input how many kilometers is your distance from seller (number only) --> ")))
-print("You are ", distance, " kilometers away from the seller.")
-print("____________________________")
-
-is_express = True
-is_international = True
-International = input("Is your order International? (Yes/No) --> ")
-
-Express = input("Do you need to rush your order? (Yes/No) --> ")
-
-shipping_cost = 0
-
-if International.upper == "YES" and Express.upper == "YES" and is_fragile == True:
-  is_express = True
-  is_international = True
-elif International.upper == "YES" and Express.upper == "NO" and is_fragile == True:
-  is_express = False
-  is_international = True
-elif International.upper == "NO" and Express.upper == "YES" and is_fragile == True:
-  is_express = True
-  is_international = False
-elif International.upper == "NO" and Express.upper == "NO" and is_fragile == True:
-  is_express = False
-  is_international = False
-elif International.upper == "YES" and Express.upper == "YES" and is_fragile == False:
-  is_express = True
-  is_international = True
-elif International.upper == "YES" and Express.upper == "NO" and is_fragile == False:
-  is_express = False
-  is_international = True
-elif International.upper == "NO" and Express.upper == "YES" and is_fragile == False:
-  is_express = True
-  is_international = False
-elif International.upper == "NO" and Express.upper == "NO" and is_fragile == False:
-  is_express = False
-  is_international = False
+print("\n_______________________________\n")
+print("Shipping Cost: ₱", total)
+print("Weight: ", weight, "kg")
+print("Distance: ", distance, "km")
+print("\n_______________________________")
