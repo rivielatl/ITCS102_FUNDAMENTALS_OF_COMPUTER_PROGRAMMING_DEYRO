@@ -16,18 +16,18 @@ print("________________________________________________")
 if (age >= 21 and age <= 75) and is_employed == True:
     if cred_score >= 750:
         if annual_income >= 100000:
-            inz = 4.5
+            inz = 0.045
         else:
-            inz = 5.0
+            inz = 0.05
     elif 600 <= cred_score < 750:
         if has_collateral == True:
-            inz = 7.0
+            inz = 0.07
         elif annual_income < 40000:
-            inz = 9.5
+            inz = 0.095
         elif has_collateral == True and annual_income < 40000:
-            inz = 8.0
+            inz = 0.080
         else:
-            inz = 8.0
+            inz = 0.08
     else:
         print("Rejected: Credit score too low.")
         exit()
@@ -40,5 +40,5 @@ loan = eval(input("How much do you want to loan? --> "))
 print("\n________________________________________________\n")
 print("Money loaned: ₱", loan)
 print("Interest: ", inz, "%")
-print("Loan with Interest: ₱", loan * inz)
+print("Loan with Interest: ₱", loan + (loan * inz))
 print("Item Collateral: ", item_collateral)
