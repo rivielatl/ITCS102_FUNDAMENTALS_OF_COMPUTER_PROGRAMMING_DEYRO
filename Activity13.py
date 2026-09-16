@@ -8,7 +8,7 @@ print("________________________________________________")
 has_collateral = bool(input("Do you have any collateral? (True/Leave it blank) --> "))
 
 print("________________________________________________")
-if (age >= 21 and age <= 75) and is_employed == True:
+if (age >= 21 and is_employed == True:
     if cred_score >= 750:
         if annual_income >= 100000:
             inz = 0.045
