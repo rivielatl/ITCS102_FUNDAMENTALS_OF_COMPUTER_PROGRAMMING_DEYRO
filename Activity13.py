@@ -7,11 +7,6 @@ annual_income = eval(input("What is your annual income? --> "))
 print("________________________________________________")
 has_collateral = bool(input("Do you have any collateral? (True/Leave it blank) --> "))
 
-if has_collateral == True:
-    item_collateral = input("What item is your collateral? --> ")
-else:
-    item_collateral = "None"
-
 print("________________________________________________")
 if (age >= 21 and age <= 75) and is_employed == True:
     if cred_score >= 750:
@@ -35,10 +30,4 @@ else:
     print("Rejected: Fails baseline criteria.")
     exit()
     
-print("________________________________________________\n")
-loan = eval(input("How much do you want to loan? --> "))
-print("\n________________________________________________\n")
-print("Money loaned: ₱", loan)
 print("Interest: ", inz, "%")
-print("Loan with Interest: ₱", loan + (loan * inz))
-print("Item Collateral: ", item_collateral)
