@@ -1,10 +1,11 @@
 # ACTIVITY 13 LOAN [CODE CHALLENGE 4 BETTER LOANING]
+import getpass
 
 acc_username = "utanganph"
 password = "utangna123"
 
 loguser = input("Username: --> ")
-logpass = input("Password: --> ")
+logpass = getpass.getpass("Password: --> ")
 print("________________________________________________")
 
 if loguser == acc_username and logpass == password:
@@ -34,17 +35,23 @@ if loguser == acc_username and logpass == password:
         if cred_score >= 750:
             if annual_income >= 100000:
                 inz = 0.045
+                inzp = inz * 100
             else:
                 inz = 0.05
+                inzp = inz * 100
         elif 600 <= cred_score < 750:
             if has_collateral == True:
                 inz = 0.07
+                inzp = inz * 100
             elif annual_income < 40000:
                 inz = 0.095
+                inzp = inz * 100
             elif has_collateral == True and annual_income < 40000:
                 inz = 0.080
+                inzp = inz * 100
             else:
                 inz = 0.08
+                inzp = inz * 100
         else:
             print("Rejected: Credit score too low.")
             exit()
@@ -55,10 +62,13 @@ if loguser == acc_username and logpass == password:
     print("________________________________________________\n")
     loan = eval(input("How much do you want to loan? --> "))
     print("\n________________________________________________\n")
+    print("First Name: ", firstname)
     print("Money loaned: ₱", loan)
-    print("Interest: ", inz, "%")
+    print("Interest: ", inzp, "%")
+    print("Money Interest: ₱", loan * inz)
     print("Loan with Interest: ₱", loan + (loan * inz))
     print("Item Collateral: ", item_collateral)
+    print("Value Collateral: ", value_collateral)
 else:
     print("Account username/password is incorrect.")
 
