@@ -1,0 +1,54 @@
+# HANDS_ON QUIZ PRACTICE
+
+owner_age = int(input("Input your age: --> "))
+business_years = float(input("Input how many years is your business: --> "))
+has_defaults = bool(input("Is your company have experienced bankruptcy? (True/Leave it as blank if False) -->"))
+
+if owner_age >= 21 and business_years >= 2.0 and has_defaults == False:
+    monthly_rev = float(input("Input your monthly revenue: --> "))
+    credit_score = int(input("Input your credit score --> "))
+    collateral = bool(input("Do you have collateral? (True/Leave it as blank if False) --> "))
+    max_loan = 0
+
+    #TIER1
+    if credit_score >= 720:
+        max_loan = monthly_rev * 3
+        if monthly_rev >= 50000:
+            dinterest = 0.015
+            pinterest = dinterest * 100
+        else:
+            dinterest = 0.025
+            pinterest = dinterest * 100
+    #TIER2
+    elif 620 <= credit_score and credit_score < 720:
+        max_loan = monthly_rev * 1.5
+        if business_years >= 5.0:
+            dinterest = 0.02
+            pinterest = dinterest * 100
+        else:
+            dinterest = 0.035
+            pinterest = dinterest * 100
+    #TIER3
+    elif credit_score < 620:
+        print("REJECTED: Credit score below requirement.")
+
+    #COLLATERAL
+    if collateral == True:
+        collateral_name = input("What is your collateral? --> ")
+        collateral_value = float(input("How much worht is your collateral? --> "))
+    
+        if collateral_value >= max_loan:
+            print("Your COLLATERAL is Passed.")
+        else:
+            print("REJECTED: Insufficient collateral value.")
+    else:
+        print("REJECTED: You don't have any collateral for your business loan.")
+
+    if collateral_value % 5000 != 0:
+        surcharge = 250
+    else:
+        surcharge = 0
+
+    
+else:
+    print("REJECTED: High Risk Application or Ineligible Owner.")
