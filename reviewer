@@ -13,6 +13,7 @@ if owner_age >= 21 and business_years >= 2.0 and has_defaults == False:
     #TIER1
     if credit_score >= 720:
         max_loan = monthly_rev * 3
+        #MONTHLY_REVENUE
         if monthly_rev >= 50000:
             dinterest = 0.015
             pinterest = dinterest * 100
@@ -22,6 +23,7 @@ if owner_age >= 21 and business_years >= 2.0 and has_defaults == False:
     #TIER2
     elif 620 <= credit_score and credit_score < 720:
         max_loan = monthly_rev * 1.5
+        #BUSINESS_YEARS
         if business_years >= 5.0:
             dinterest = 0.02
             pinterest = dinterest * 100
