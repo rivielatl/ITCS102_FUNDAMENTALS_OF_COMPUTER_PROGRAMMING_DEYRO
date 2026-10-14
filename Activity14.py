@@ -5,5 +5,5 @@ for counting in range(2001):
 
 # LOOP
 
-for counting in range(10, 0, -1):
-    print(counting)
+for bilang in range(10, 0, -1):
+    print(bilang)
