@@ -3,7 +3,7 @@
 # TASK1
 loanamount = 1000
 loanyears = 2
-rate = 0.002506
+rate = 0.00256
 remainingloan = loanamount
 principal = loanamount / (loanyears * 12)
 interest = remainingloan * rate
