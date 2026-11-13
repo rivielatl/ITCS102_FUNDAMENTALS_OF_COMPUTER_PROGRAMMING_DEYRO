@@ -22,7 +22,7 @@ for x in range(1, (12 * loanyears) + 1):
     
     for y in range(0, 1):
         print(f"{x} \t | \t ${monthlypayment:.2f} \t\t | \t ${interest:.2f} \t\t | \t ${principal:.2f} \t | \t ${remainingloan:.2f}")
-    print()
+    print(end="")
 
 # TASK2
 print("\n\n TASK #2 \n\n")
