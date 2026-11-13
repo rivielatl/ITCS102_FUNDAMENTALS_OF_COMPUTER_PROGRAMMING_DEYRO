@@ -29,9 +29,7 @@ print("\n\n TASK #2 \n\n")
 
 for x in range(0, 7):
     for y in range(0, 13):
-        if x == 6 or x+y == 6:
-            print("*", end="")
-        elif (x ==1  and x+y == 8) or (x == 2 and x+y == 10) or (x == 3 and x+y == 12) or (x == 4 and x+y == 14) or (x == 5 and x+y == 16):
+        if x == 6 or x+y == 6 or x == y - 6:
             print("*", end="")
         else:
             print(" ", end="")
