@@ -24,3 +24,5 @@ print(f"How many seats are taken? --> {len(jeepney)}")
 print(f"Is Ana still on board? --> {"Ana" in jeepney}")
 jeepney.reverse()
 print(f"> Return Trip: {jeepney}")
+
+
